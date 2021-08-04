@@ -16,16 +16,12 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.deepPurpleAccent,
       ),
       body: Center(
-        child: Text(
-          "Hello Ninjas",
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2,
-            color: Colors.grey[800],
-            fontFamily: 'IndieFlower',
-          ),
-        ),
+        // child: Image(
+          // image: NetworkImage('https://wallpapershome.com/images/pages/ico_v/21906.jpg'),
+          // image: AssetImage('assets/1.jpg'),
+        // ),
+        child: Image.asset('assets/2.jpg'), // short hand
+        // child: Image.network('https://wallpaperaccess.com/full/1213672.jpg'),
       ),
       floatingActionButton: FloatingActionButton(
         child: Text("click"),
