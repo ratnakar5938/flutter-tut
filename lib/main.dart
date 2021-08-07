@@ -19,7 +19,8 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-           Text("Hello World"),
+          Text("Hello World"),
+          // ignore: deprecated_member_use
           FlatButton(
             onPressed: () {},
             color: Colors.yellowAccent,
