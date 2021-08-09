@@ -16,15 +16,32 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.deepPurpleAccent,
       ),
       body: Center(
-        child: Text(
-          "Hello Ninjas",
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2,
-            color: Colors.grey[800],
-            fontFamily: 'IndieFlower',
+        // child: RaisedButton(
+        // child: FlatButton(
+        //   onPressed: (){
+        //     print("You clicked me");
+        //   },
+        //   child: Text("Click Me"),
+        //   color: Colors.lightBlueAccent,
+        // ),
+        // child: RaisedButton.icon(
+        //     onPressed: (){
+        //       print("You sent a mail");
+        //     },
+        //     icon: Icon(
+        //       Icons.mail
+        //     ),
+        //   label: Text("Mail me"),
+        //   color: Colors.amber,
+        // ),
+        child: IconButton(
+          onPressed: (){
+            print("You clicked the icon");
+          },
+          icon: Icon(
+            Icons.alternate_email
           ),
+          color: Colors.amber,
         ),
       ),
       floatingActionButton: FloatingActionButton(
