@@ -1,41 +1,34 @@
 import 'package:flutter/material.dart';
 
+class HelloRectangle extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Colors.greenAccent,
+        height: 400.0,
+        width: 300.0,
+        child: Center(
+          child: Text(
+              "Hello",
+                  style: TextStyle(fontSize: 40.0),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Hello Rectangle',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Hello Rectangle'),
+          title: Text("Heel world"),
         ),
         body: HelloRectangle(),
       ),
     ),
   );
 }
-
-class HelloRectangle extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: container,
-    );
-  }
-}
-
-var container = Container(
-  color: Colors.purpleAccent[100],
-  width: 300.0,
-  height: 400.0,
-  margin: EdgeInsets.all(16.0),
-  child: Column(
-    children: <Widget>[
-      Text('Hello'),
-      Text('Hello'),
-      Text('Hello'),
-      Text('Hello'),
-      Text('Hello'),
-    ],
-  ),
-);
