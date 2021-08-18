@@ -10,8 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Startup Name Generator',
-      theme: ThemeData(          // Add the 3 lines from here...
-        primaryColor: Colors.white,
+      theme: ThemeData(
+        // Add the 3 lines from here...
+        primaryColor: Colors.tealAccent,
       ),
       home: RandomWords(),
     );
@@ -28,7 +29,8 @@ class RandomWords extends StatefulWidget {
 class _RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
   final _saved = <WordPair>{};
-  final _biggerFont = const TextStyle(fontSize: 22.0);
+  final _biggerFont = const TextStyle(
+      fontSize: 22.0, fontWeight: FontWeight.w300, color: Colors.deepPurple);
 
   @override
   Widget build(BuildContext context) {
@@ -80,17 +82,18 @@ class _RandomWordsState extends State<RandomWords> {
     );
   }
 
-  void _pushSaved(){
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (BuildContext context){
-        final tiles = _saved.map((WordPair pair) {
-          return ListTile(
-            title: Text(
-              pair.asPascalCase,
-              style: _biggerFont,
-            ),
-          );
-        },
+  void _pushSaved() {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (BuildContext context) {
+        final tiles = _saved.map(
+          (WordPair pair) {
+            return ListTile(
+              title: Text(
+                pair.asPascalCase,
+                style: _biggerFont,
+              ),
+            );
+          },
         );
         final divided = tiles.isNotEmpty
             ? ListTile.divideTiles(context: context, tiles: tiles).toList()
@@ -102,7 +105,7 @@ class _RandomWordsState extends State<RandomWords> {
           ),
           body: ListView(children: divided),
         );
-      },)
-    );
+      },
+    ));
   }
 }
